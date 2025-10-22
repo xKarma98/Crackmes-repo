@@ -1,21 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
-// It's not 100% accurate but this is bare bones the relevant code.
-void functionss(char* varz) {
+// Relevant portion only.
+int functionss(char* varz) {
 	char var2[12] = { '\0' };
 	strcpy_s(var2, sizeof(var2), varz);
 	if (strlen(var2) == 11) {
 		if (var2[0] == 'A' && var2[3] == 'X' && var2[7] == 'X') {
 			printf("Your key is valid proceed\n");
+			return 1;
 		}
 		else {
 			printf("Wrong key");
+			return -1;
 		}
 	}
-	else {
+	else if (var2 > 11) {
 		printf("Key length is above 11\n");
+		return -1;
 	}
+	return 0;
 }
 
 int main(int argc, char* argv[]) {
