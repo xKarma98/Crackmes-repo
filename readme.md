@@ -68,3 +68,5 @@ I am a amazing artist hands down, sike!
 Please enter a valid KEY: ACAXTRAXIN1
 The key entered is valid
 ```
+
+I will put a fully compilable version based off what I see in here alone.
